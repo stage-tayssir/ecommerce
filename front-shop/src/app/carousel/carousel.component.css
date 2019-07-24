@@ -1,0 +1,13 @@
+.carousel-item{
+    height: 400px;
+   
+} 
+.carousel-item img{
+    height: 100%;
+}
+
+
+.bd-example{
+    padding-top : 100px;
+    box-shadow: 2em black;
+}

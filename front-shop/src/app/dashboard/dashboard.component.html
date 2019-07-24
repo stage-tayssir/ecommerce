@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col">
+           
+                              <hr/>  
+                              <div class="row  justify-content-center">
+                                    <div class="col-8">
+                                         <form>
+                                                <div class="form-row">
+                                                        <div class="col">
+                                                          <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off"
+                                                           placeholder="Recherche voiture par modele , marque ou annee">
+                                                        </div>
+                                                 </div>
+                                         </form>
+                                    </div>
+      
+                                </div>
+                              <hr/>
+                         
+                              <div class="row  justify-content-end">
+                              <div class="col-3">
+                                    <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                      <option selected>trier par ... </option>
+                                      <option value="1">prix croissant</option>
+                                      <option value="2">prix decroissant</option>
+                                      <option value="3">date croissante</option>
+                                      <option value="4">date decroissante</option>
+                                    </select>
+
+                              </div>
+
+                          </div>
+                              
+                        
+                
+                
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div  *ngFor="let c of car | filter:searchText "  class="col-md-4 col-sm-12">
+            <div class="card-deck" >
+                <div  class="card shadow">
+                  <img src="http://wallpaperswide.com/download/2020_mercedes_amg_gt_r-wallpaper-2560x1080.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">{{c.marque}}</h5>
+                    <p class="card-text">{{c.modele}}.</p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
