@@ -10,6 +10,8 @@ import { ServiceService } from '../service.service';
 export class DashboardComponent implements OnInit {
   car: any = [];
   searchText;
+  
+  
 
   constructor(private api : ServiceService) {
     this.api.getAllcars();
@@ -21,7 +23,15 @@ export class DashboardComponent implements OnInit {
     
   }
 
-  
+  selectedLevel;
+  sortby:Array<Object> = [
+      {id: 0, name: "modele",value:"modele"},
+      {id: 1, name: "prix croi",value:"id"},
+      {id: 2, name: "prix decr",value:"-id"}
+
+  ];
+
+
   getCars = () => {
     this.api.getAllcars().subscribe(
       data =>{
@@ -33,5 +43,27 @@ export class DashboardComponent implements OnInit {
     );
   }
 
+order :string = "marque";
+
+
+selected(){
+    
+   switch(this.selectedLevel.id) { 
+   case 0: { 
+      this.order =  this.selectedLevel.value; 
+      break; 
+   } 
+   case 1: { 
+    this.order =  this.selectedLevel.value; 
+      break; 
+   } 
+   case 2: {
+    this.order =  this.selectedLevel.value;
+      break;    
+}
+    console.log(this.selectedLevel);
+  }
+
+}
 
 }

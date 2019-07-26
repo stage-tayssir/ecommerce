@@ -11,6 +11,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { FooterComponent } from './footer/footer.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { OrderModule } from 'ngx-order-pipe';
+import {NgPipesModule} from 'ngx-pipes';
 
 
 const approute : Routes = [
@@ -31,7 +33,9 @@ const approute : Routes = [
     RouterModule.forRoot(approute),
     HttpClientModule,
     FormsModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    OrderModule,
+    NgPipesModule
   ],
   providers: [
     ServiceService,

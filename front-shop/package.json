@@ -21,6 +21,9 @@
     "@angular/router": "~8.1.1",
     "bootstrap": "^4.3.1",
     "ng2-search-filter": "^0.5.1",
+    "ngx-order-by": "^1.0.4",
+    "ngx-order-pipe": "^2.0.3",
+    "ngx-pipes": "^2.5.6",
     "rxjs": "~6.4.0",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
