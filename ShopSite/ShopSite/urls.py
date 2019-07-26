@@ -7,6 +7,8 @@ from marketplace import views
 
 router = routers.DefaultRouter()
 router.register(r'marketplace', views.CarsViewSet)
+router.register(r'Equipement', views.EquipementViewSet)
+router.register(r'Accessoires', views.AccessoireViewSet)
 router.register(r'', views.CarsViewSet)
 
 urlpatterns = [

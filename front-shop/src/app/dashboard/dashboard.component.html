@@ -52,7 +52,9 @@
                     <p class="card-text">{{c.modele}}.</p>
                   </div>
                   <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
+                      <a [routerLink]="c.id">
+                    <button type="button" class="btn btn-primary">Details</button>
+                    </a>
                   </div>
                 </div>
               </div>

@@ -11,11 +11,17 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { FooterComponent } from './footer/footer.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { DetailsComponent } from './details/details.component';
+import { ApiAcessService } from './api-acess.service';
+import { AccessoiresComponent } from './accessoires/accessoires.component';
 
 
 const approute : Routes = [
   { path: '', component: DashboardComponent },
-  { path: 'dashboard', component: DashboardComponent }
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'dashboard/:id', component: DetailsComponent },
+  { path: 'service', component: AccessoiresComponent }
+
 ];
 @NgModule({
   declarations: [
@@ -23,7 +29,9 @@ const approute : Routes = [
     DashboardComponent,
     NavbarComponent,
     CarouselComponent,
-    FooterComponent
+    FooterComponent,
+    DetailsComponent,
+    AccessoiresComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +43,7 @@ const approute : Routes = [
   ],
   providers: [
     ServiceService,
+    ApiAcessService
   ],
   bootstrap: [AppComponent]
 })

@@ -18,9 +18,11 @@ getAllcars(): Observable<any>{
   {headers : this.httpHeaders});
 }
 
-
-
-
+getOneCar(id): Observable <any>{
+  return this.http.get(this.baseurl + '/marketplace/' + id + '/',
+  {headers: this.httpHeaders});
+}
+ 
 
 
 }

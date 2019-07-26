@@ -1,0 +1,73 @@
+
+<div class="container">
+        <div class="row justify-content-center">
+
+        <div class="col-md-4 col-sm-12" *ngFor = "let a of accessoires">
+                <div class="card-deck" >
+                        <div  class="card shadow">
+                    
+                  <img src="{{ a.img_url }}"  class="card-img-top" alt="{{a.marque}}">
+                  
+                  <div class="card-body">
+                    <h4 class="card-title">nom : {{ a.nom }}</h4>
+                    <h5 class="card-text">marque : {{ a.marque }}</h5>
+                    <h6 class="card-text">prix : {{a.prix}}</h6>
+                  </div>
+                  <div class="card-footer" style="text-align: center;">              
+
+                            
+
+    
+    
+                                  <!-- details movie -->
+                                    <a [routerLink]="a.id">
+                                    <button  class="btn btn-primary"data-toggle="popover" title="Details accessoires" data-placement="bottom" 
+                                    data-trigger="hover">Details
+                                    </button>
+                                  </a>
+                      </div>   
+                      </div>
+                      </div>
+                      </div>
+                   
+                      
+    </div>
+    
+    
+      
+             
+           </div>
+          
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
