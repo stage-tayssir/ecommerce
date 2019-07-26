@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { OrderModule } from 'ngx-order-pipe';
 import {NgPipesModule} from 'ngx-pipes';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 
 const approute : Routes = [
@@ -35,7 +36,8 @@ const approute : Routes = [
     FormsModule,
     Ng2SearchPipeModule,
     OrderModule,
-    NgPipesModule
+    NgPipesModule,
+    NgxPaginationModule
   ],
   providers: [
     ServiceService,

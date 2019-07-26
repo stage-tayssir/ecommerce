@@ -1,0 +1,30 @@
+.container-fluid{
+    width: 100%;
+    background-color: #212529;
+    height: 300px;
+    margin-top: 50px;
+}
+
+#child1{
+    height: 70px;
+    background-color: rgb(168, 167, 168);
+    
+    
+}
+
+.child1-items{
+    display: inline-block;
+    padding: 20px;
+}
+
+
+.social{
+    margin-right: 20px;
+}
+#social-group{
+    text-align-last: right
+}
+#footer-body{
+    color: white;
+    margin-top: 15px;
+}

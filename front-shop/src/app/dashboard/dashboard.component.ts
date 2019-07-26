@@ -10,7 +10,7 @@ import { ServiceService } from '../service.service';
 export class DashboardComponent implements OnInit {
   car: any = [];
   searchText;
-  
+  p: number = 1;
   
 
   constructor(private api : ServiceService) {
