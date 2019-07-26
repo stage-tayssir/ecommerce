@@ -43,7 +43,7 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div  *ngFor="let c of car | filter:searchText "  class="col-md-4 col-sm-12">
+        <div  *ngFor="let c of car | filter:searchText | paginate: { itemsPerPage: 2, currentPage: p }"  class="col-md-4 col-sm-12">
             <div class="card-deck" >
                 <div  class="card shadow">
                   <img src="http://wallpaperswide.com/download/2020_mercedes_amg_gt_r-wallpaper-2560x1080.jpg" class="card-img-top" alt="...">
@@ -58,6 +58,10 @@
                   </div>
                 </div>
               </div>
+
         </div>
     </div>
+
 </div>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
+

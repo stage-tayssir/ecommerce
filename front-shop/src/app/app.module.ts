@@ -13,14 +13,21 @@ import { FooterComponent } from './footer/footer.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { DetailsComponent } from './details/details.component';
 import { ApiAcessService } from './api-acess.service';
-import { AccessoiresComponent } from './accessoires/accessoires.component';
+import { AccessoiresComponent } from './equipement/accessoires.component';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { AccessoiresService } from './accessoires.service';
+import { AccessComponent } from './access/access.component';
+import { CartService } from './cart.service';
+import { CartlistComponent } from './cartlist/cartlist.component';
 
 
 const approute : Routes = [
   { path: '', component: DashboardComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'dashboard/:id', component: DetailsComponent },
-  { path: 'service', component: AccessoiresComponent }
+  { path: 'service', component: AccessoiresComponent },
+  { path: 'access', component: AccessComponent },
+  { path: 'cart', component: CartlistComponent }
 
 ];
 @NgModule({
@@ -31,7 +38,10 @@ const approute : Routes = [
     CarouselComponent,
     FooterComponent,
     DetailsComponent,
-    AccessoiresComponent
+    AccessoiresComponent,
+    AccessComponent,
+    CartlistComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -39,11 +49,14 @@ const approute : Routes = [
     RouterModule.forRoot(approute),
     HttpClientModule,
     FormsModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    NgxPaginationModule
   ],
   providers: [
     ServiceService,
-    ApiAcessService
+    ApiAcessService,
+    AccessoiresService,
+    CartService
   ],
   bootstrap: [AppComponent]
 })

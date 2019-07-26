@@ -5,17 +5,17 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class ApiAcessService {
+export class AccessoiresService {
 
   constructor(private http : HttpClient) { }
   baseurl = "http://127.0.0.1:8000";
   httpheaders = new HttpHeaders( {'content-Type':'application/json'} );
   getAllAccessoire(): Observable <any>{
-    return this.http.get(this.baseurl + '/Equipement/',
+    return this.http.get(this.baseurl + '/Accessoires/',
     {headers: this.httpheaders});
   }
   getOneAccessoire(id): Observable <any>{
-    return this.http.get(this.baseurl + '/Equipement/' + id + '/',
+    return this.http.get(this.baseurl + '/Accessoires/' + id + '/',
     {headers: this.httpheaders});
   }
 

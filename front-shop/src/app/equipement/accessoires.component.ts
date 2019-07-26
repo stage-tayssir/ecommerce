@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiAcessService } from '../api-acess.service';
 
+
 @Component({
   selector: 'app-accessoires',
   templateUrl: './accessoires.component.html',
@@ -28,7 +29,6 @@ export class AccessoiresComponent implements OnInit {
     }
     );
   }
-
 
   
 }
