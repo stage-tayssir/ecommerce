@@ -22,7 +22,7 @@ import { CartlistComponent } from './cartlist/cartlist.component';
 
 
 const approute : Routes = [
-  { path: '', component: DashboardComponent },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'dashboard/:id', component: DetailsComponent },
   { path: 'service', component: AccessoiresComponent },

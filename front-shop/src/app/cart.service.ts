@@ -26,6 +26,9 @@ addAccess(accessoire){
 getAll(){
   return (this.accessoires);
 }
-
+delete(c){
+  this.accessoires.splice(this.accessoires.indexOf(c),1);
+  this.getAll();
+}
 
 }

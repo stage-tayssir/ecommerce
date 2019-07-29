@@ -8,7 +8,7 @@ import { CartService } from '../cart.service';
   styleUrls: ['./access.component.css']
 })
 export class AccessComponent implements OnInit {
-  accessoires= [{marque: 'test'}];
+  accessoires= [{nom: 'test'}];
 
   constructor(private api:AccessoiresService,
     private cart :CartService){
@@ -32,7 +32,6 @@ export class AccessComponent implements OnInit {
   }
   addAccess (a){
     this.cart.addAccess(a);
-   console.log( this.cart.getAll());
   }
 
 
