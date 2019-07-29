@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from '../service.service';
+import { CartService } from '../cart.service';
 
 
 @Component({
@@ -11,8 +12,11 @@ export class DashboardComponent implements OnInit {
   car: any = [];
   searchText;
   p: number = 1;
-  constructor(private api : ServiceService) {
+  constructor(private api : ServiceService,
+    private cart : CartService
+    ) {
     this.api.getAllcars();
+  
    }
 
   ngOnInit() {
@@ -32,6 +36,11 @@ export class DashboardComponent implements OnInit {
       }
     );
   }
+
+  add(c){
+      this.cart.addAccess(c);
+  }
+
 
 
 }

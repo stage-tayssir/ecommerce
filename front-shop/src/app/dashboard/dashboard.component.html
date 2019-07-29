@@ -52,8 +52,8 @@
                     <p class="card-text">{{c.modele}}.</p>
                   </div>
                   <div class="card-footer">
-                      <a [routerLink]="c.id">
-                    <button type="button" class="btn btn-primary">Details</button>
+                      <a >
+                    <button type="button" class="btn btn-primary" (click)="add(c)">add to cart</button>
                     </a>
                   </div>
                 </div>
